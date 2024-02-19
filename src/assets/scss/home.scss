@@ -1,0 +1,90 @@
+.sidebar {
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #232222;
+
+    // .sidebar__body
+    &__body {
+        padding: 10px;
+    }
+
+    // .sidebar__list
+    &__list {}
+}
+
+.list-sidebar__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @include adaptiveValue("gap", 10, 5);
+    font-weight: 300;
+    font-size: rem(14);
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.1s ease 0s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: rgba(91, 91, 91, 0.25);
+        }
+    }
+}
+
+.add-task-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: rem(14);
+    font-weight: 700;
+    @include adaptiveValue("gap", 10, 5);
+    transition: all 0.3s ease 0s;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.1s ease 0s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    &._sidebar-add-task {
+        width: 100%;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $blue;
+                background-color: rgba(91, 91, 91, 0.25);
+
+                .sidebar-icon {
+                    fill: $blue;
+                }
+            }
+        }
+    }
+}
+
+.sidebar-icon {
+    transition: all 0.1s ease 0s;
+}
+
+.sidebar__button-toggle {
+    padding: 10px 10px 5px 10px;
+    border-radius: 5px;
+    float: right;
+    transition: all 0.1s ease 0s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: rgba(91, 91, 91, 0.25);
+
+            .sidebar-icon {
+                color: #fff;
+            }
+        }
+    }
+}

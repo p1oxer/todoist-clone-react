@@ -1,11 +1,12 @@
 import { useState } from "react";
 import "./assets/scss/style.scss";
 import Icon from "./Icon";
+import { Sidebar } from "./components/Sidebar";
 
 function App() {
     return (
         <>
-            <Icon icon="sidebar" size={50} color="orange" />;
+            <Sidebar></Sidebar>
         </>
     );
 }
