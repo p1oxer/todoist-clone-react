@@ -1,18 +1,40 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
 .sidebar {
-    width: 300px;
+    width: 0px;
     height: 100%;
-    position: fixed;
+    // position: fixed;
     top: 0;
     left: 0;
     background-color: #232222;
+    transition: all 0.3s ease 0s;
+
+    &.sidebar-opened {
+        width: 300px;
+    }
 
     // .sidebar__body
     &__body {
         padding: 10px;
+
     }
 
     // .sidebar__list
-    &__list {}
+    &__list {
+        // display: none;
+        visibility: hidden;
+        opacity: 0;
+
+        .sidebar-opened & {
+            display: block;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
 }
 
 .list-sidebar__item {
@@ -76,7 +98,7 @@
     padding: 10px 10px 5px 10px;
     border-radius: 5px;
     float: right;
-    transition: all 0.1s ease 0s;
+    transition: all 0.15s ease 0s;
 
     @media (any-hover: hover) {
         &:hover {
@@ -86,5 +108,22 @@
                 color: #fff;
             }
         }
+    }
+}
+
+.content-sidebar-button {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.1s ease 0s;
+    float: left;
+    margin: 10px 0px 0px 10px;
+
+    // position: absolute;
+    // top: 10px;
+    // left: 10px;
+    &._hidden {
+
+        opacity: 0;
+        visibility: hidden;
     }
 }

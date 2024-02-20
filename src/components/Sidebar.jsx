@@ -3,13 +3,13 @@ import Icon from "../Icon";
 import { SidebarListItem } from "./SidebarListItem";
 import { AddTaskButton } from "./AddTaskButton";
 
-export const Sidebar = () => {
-
+export const Sidebar = ({ isOpened, setSidebarOpened }) => {
     return (
         <>
-            <div className="sidebar">
+            <div className={isOpened ? "sidebar sidebar-opened" : "sidebar"}>
                 <div className="sidebar__body">
                     <button
+                        onClick={() => setSidebarOpened(!isOpened)}
                         title="Открыть/скрыть сайдбар"
                         type="button"
                         className="sidebar__button-toggle"
