@@ -15,22 +15,24 @@ export const SidebarSpoilerItem = ({ name, color, projectsAmount }) => {
                 <Icon icon="hashtag" size="13px" color={color ?? "#a3a3a3"} />
                 Какое-то имя
             </p>
-            {isHovering ? (
-                <button
-                    title="options"
-                    type="button"
-                    className="body-spoiler-sidebar__options"
-                >
-                    <Icon
-                        className="options-icon"
-                        icon="option"
-                        size="20px"
-                        color={iconsWhite}
-                    />
-                </button>
-            ) : (
-                <small>{1}</small>
-            )}
+            <div className="">
+                {isHovering ? (
+                    <button
+                        title="options"
+                        type="button"
+                        className="body-spoiler-sidebar__options"
+                    >
+                        <Icon
+                            className="options-icon"
+                            icon="option"
+                            size="20px"
+                            color={iconsWhite}
+                        />
+                    </button>
+                ) : (
+                    <small>{1}</small>
+                )}
+            </div>
         </li>
     );
 };

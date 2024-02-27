@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Icon from "../../Icon";
 
-export const SidebarListItem = ({ icon, children, iconSize, iconColor }) => {
+export const SidebarListItem = ({ icon, children, iconSize, iconColor, path }) => {
     return (
         <>
             <li className="list-sidebar__item">

@@ -1,0 +1,12 @@
+.page__title {
+    @include adaptiveValue("font-size", 30, 18);
+    font-weight: 700;
+
+    &:not(:last-child) {
+        margin-bottom: rem(20);
+    }
+}
+
+.page__container {
+    padding-top: 70px;
+}

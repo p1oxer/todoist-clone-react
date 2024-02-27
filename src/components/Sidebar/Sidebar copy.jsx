@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Icon from "../../Icon";
 import { SidebarListLink } from "./SidebarListLink";
-import { SidebarListItem } from "./SidebarListItem";
 import { AddTaskButton } from "../AddTaskButton";
 import { SidebarSpoiler } from "./SidebarSpoiler";
 

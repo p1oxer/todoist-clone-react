@@ -1,38 +1,16 @@
-import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import "./assets/scss/style.scss";
-import Icon from "./Icon";
-import { Sidebar } from "./components/Sidebar/Sidebar";
-
+import { TodayPage } from "./pages/TodayPage";
+import { UpcomingPage } from "./pages/UpcomingPage";
+import { Layout } from "./components/Layout";
 function App() {
-    const [sidebarOpened, setSidebarOpened] = useState(true);
-    const iconsWhite = "#ffffffc2";
     return (
-        <>
-            <div className="wrapper">
-                <Sidebar setSidebarOpened={setSidebarOpened} isOpened={sidebarOpened} />
-
-                <div className="content">
-                    <button
-                        onClick={() => setSidebarOpened(!sidebarOpened)}
-                        title="Открыть/скрыть сайдбар"
-                        type="button"
-                        className={
-                            sidebarOpened
-                                ? "sidebar__button-toggle content-sidebar-button _hidden"
-                                : "sidebar__button-toggle content-sidebar-button "
-                        }
-                    >
-                        <Icon
-                            className="sidebar-icon"
-                            icon="sidebar"
-                            size="25px"
-                            color={iconsWhite}
-                        />
-                    </button>
-                    какойт о текст
-                </div>
-            </div>
-        </>
+        <Routes>
+            <Route path="/" element={<Layout />}>
+                <Route path="/today" element={<TodayPage />} />
+                <Route path="/upcoming" element={<UpcomingPage />} />
+            </Route>
+        </Routes>
     );
 }
 
