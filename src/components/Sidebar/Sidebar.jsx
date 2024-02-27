@@ -1,12 +1,15 @@
 import { useState } from "react";
-import Icon from "../Icon";
+import Icon from "../../Icon";
 import { SidebarListItem } from "./SidebarListItem";
 import { AddTaskButton } from "./AddTaskButton";
+import { SidebarSpoiler } from "./SidebarSpoiler";
 
 export const Sidebar = ({ isOpened, setSidebarOpened }) => {
+    const iconsWhite = "#ffffffc2";
+
     return (
         <>
-            <div className={isOpened ? "sidebar sidebar-opened" : "sidebar"}>
+            <aside className={isOpened ? "sidebar sidebar-opened" : "sidebar"}>
                 <div className="sidebar__body">
                     <button
                         onClick={() => setSidebarOpened(!isOpened)}
@@ -18,35 +21,36 @@ export const Sidebar = ({ isOpened, setSidebarOpened }) => {
                             className="sidebar-icon"
                             icon="sidebar"
                             size="25px"
-                            color={"#ffffffc2"}
+                            color={iconsWhite}
                         />
                     </button>
                     <ul className="sidebar__list list-sidebar">
                         <AddTaskButton isInSidebar={true} />
                         <SidebarListItem
                             iconSize="1.3em"
-                            iconColor={"#ffffffc2"}
+                            iconColor={iconsWhite}
                             icon="search"
                         >
                             Поиск
                         </SidebarListItem>
                         <SidebarListItem
                             iconSize="1.3em"
-                            iconColor="#ffffffc2"
+                            iconColor={iconsWhite}
                             icon="calendar"
                         >
                             Сегодня
                         </SidebarListItem>
                         <SidebarListItem
                             iconSize="1.3em"
-                            iconColor="#ffffffc2"
+                            iconColor={iconsWhite}
                             icon="calendar-1"
                         >
                             Предстоящее
                         </SidebarListItem>
                     </ul>
+                    <SidebarSpoiler />
                 </div>
-            </div>
+            </aside>
         </>
     );
 };

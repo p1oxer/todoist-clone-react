@@ -1,17 +1,16 @@
 import { useState } from "react";
 import "./assets/scss/style.scss";
 import Icon from "./Icon";
-import { Sidebar } from "./components/Sidebar";
+import { Sidebar } from "./components/Sidebar/Sidebar";
 
 function App() {
     const [sidebarOpened, setSidebarOpened] = useState(true);
+    const iconsWhite = "#ffffffc2";
     return (
         <>
             <div className="wrapper">
-                <Sidebar
-                    setSidebarOpened={setSidebarOpened}
-                    isOpened={sidebarOpened}
-                ></Sidebar>
+                <Sidebar setSidebarOpened={setSidebarOpened} isOpened={sidebarOpened} />
+
                 <div className="content">
                     <button
                         onClick={() => setSidebarOpened(!sidebarOpened)}
@@ -27,7 +26,7 @@ function App() {
                             className="sidebar-icon"
                             icon="sidebar"
                             size="25px"
-                            color={"#ffffffc2"}
+                            color={iconsWhite}
                         />
                     </button>
                     какойт о текст
