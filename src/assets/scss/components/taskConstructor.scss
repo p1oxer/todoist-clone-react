@@ -1,0 +1,36 @@
+.form-edit-task {
+    border: 1px solid #4b4a4a;
+    border-radius: 10px;
+
+    // .form-edit-task__info
+    &__info {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        gap: 5px;
+    }
+
+    // .form-edit-task__input
+    &__input {
+        background-color: transparent;
+        outline: none;
+        color: #fff;
+        font-size: rem(16);
+
+        &._task-description {
+            font-size: rem(14);
+        }
+    }
+
+    // .form-edit-task__bottom
+    &__bottom {
+        border-top: 1px solid #4b4a4a;
+    }
+    
+    // .form-edit-task__buttons
+    &__buttons {
+        padding: 15px;
+        display: flex;
+        gap: 15px;
+    }
+}

@@ -1,11 +1,12 @@
 import { useState } from "react";
 import Icon from "../Icon";
 
-export const AddTaskButton = ({ isInSidebar }) => {
+export const AddTaskButton = ({ isInSidebar, onClick, }) => {
     return (
         <>
             <button
-                type="button"
+                onClick={onClick}
+                type="submit"
                 className={
                     isInSidebar ? "add-task-button _sidebar-add-task" : "add-task-button"
                 }

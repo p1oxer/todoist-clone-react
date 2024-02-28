@@ -1,0 +1,59 @@
+@use "sass:math";
+
+.task {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    gap: 10px;
+    border-bottom: 1px solid #4b4a4a;
+    padding-bottom: 15px;
+
+    &__info {
+        line-height: math.div(14, 10);
+    }
+
+    // .task__completion-button
+    &__completion-button {
+        width: rem(20);
+        height: rem(20);
+        border: 1px solid #ffffffac;
+        border-radius: 50%;
+
+        @media (any-hover: hover) {
+            &:hover {
+                border: 1px solid #fff;
+            }
+        }
+    }
+
+    // .task__name
+    &__name {
+        font-size: rem(15);
+    }
+
+    // .task__description
+    &__description {
+        font-size: rem(12);
+        color: #ffffffac;
+    }
+
+    // .task__editing-button
+    &__editing-button {
+        padding: 4px 5px 0 5px;
+        height: fit-content;
+        border-radius: 5px;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $hoverGray;
+
+                .pen-icon {
+                    color: #fff;
+                }
+            }
+        }
+
+        margin-left: auto;
+    }
+}

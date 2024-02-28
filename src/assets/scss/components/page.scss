@@ -10,3 +10,10 @@
 .page__container {
     padding-top: 70px;
 }
+
+.page__todos-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: rem(10);
+}

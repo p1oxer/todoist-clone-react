@@ -1,3 +1,4 @@
+import { Page } from "../components/Page";
 export function UpcomingPage() {
-    return <div className="">upcoming!</div>;
+    return <Page title={"Предстоящее"} />;
 }
