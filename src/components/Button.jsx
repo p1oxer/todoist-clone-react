@@ -1,6 +1,13 @@
-export function Button({ isBlue, text, onClick }) {
+import { useState } from "react";
+
+export function Button({ isBlue, text, onClick, disabled}) {
     return (
-        <button onClick={onClick} type="button" className={isBlue ? "button _button-blue" : "button"}>
+        <button
+            disabled={disabled}
+            onClick={onClick}
+            type="button"
+            className={isBlue ? "button _button-blue" : "button"}
+        >
             {text}
         </button>
     );

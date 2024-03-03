@@ -4,7 +4,28 @@
     height: 100vh;
 }
 
-
 .content {
     width: 100%;
+}
+
+.todos{
+    
+}
+
+.todo-enter {
+    opacity: 0;
+}
+
+.todo-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+
+.todo-exit {
+    opacity: 1;
+}
+
+.todo-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
 }

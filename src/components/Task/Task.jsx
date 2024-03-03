@@ -1,10 +1,10 @@
 import Icon from "../../Icon";
 
-export function Task({ todo, deleteTodo }) {
+export function Task({ todo, deleteTodo, handleEditClick, ref }) {
     const iconsWhite = "#ffffffc2";
 
     return (
-        <li className="task">
+        <li ref={ref} className="task">
             <button
                 onClick={() => deleteTodo(todo.id)}
                 type="button"
@@ -15,7 +15,11 @@ export function Task({ todo, deleteTodo }) {
                 <p className="task__description">{todo.description}</p>
             </div>
 
-            <button type="button" className="task__editing-button">
+            <button
+                onClick={() => handleEditClick(todo.id)}
+                type="button"
+                className="task__editing-button"
+            >
                 <Icon className="pen-icon" icon="pen" size="20px" color={iconsWhite} />
             </button>
         </li>
